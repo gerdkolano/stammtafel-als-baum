@@ -1,0 +1,9 @@
+# bei https://github.com/gerdkolano ein Repository namens "stammtafel-als-baum" herstellen
+pushd /daten/srv/www/htdocs/stamm/mysqli/
+git init
+git add .
+git commit -m "Erstes Commit"
+git remote add origin https://github.com/gerdkolano/stammtafel-als-baum
+git push origin master
+git pull origin master
+git push origin master
