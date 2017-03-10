@@ -1229,3 +1229,58 @@
 2017-03-10 20:20:23.10576 SELECT * FROM `st_stamm` WHERE `selbst` = '995';
 2017-03-10 20:20:23.11596 SELECT * FROM `st_stamm` WHERE `selbst` = '997';
 2017-03-10 20:20:23.13472 SELECT * FROM `st_stamm` WHERE `selbst` = '997';
+2017-03-10 22:37:58 zoe.xeo joo336 ##############################################################################################################
+2017-03-10 22:37:58.75606 HEL030 Current character set: utf8;
+2017-03-10 22:37:58.76639 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:37:58.76932 SELECT `selbst` FROM `st_stamm` WHERE `mutter`=1 OR `vater`=1 ORDER BY `geburtszeit`;
+2017-03-10 22:37:58.78333 SELECT * FROM `st_stamm` WHERE `selbst` = '75';
+2017-03-10 22:37:58.79648 SELECT * FROM `st_stamm` WHERE `selbst` = '76';
+2017-03-10 22:37:58.80006 SELECT `ehe` FROM `st_ehen` WHERE `frau`=1 OR `mann`=1 ORDER BY `ehezeit`;
+2017-03-10 22:37:58.80412 SELECT * FROM `st_ehen` WHERE `ehe` = 21;;
+2017-03-10 22:37:58.81059 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:39:59 zoe.xeo joo336 ##############################################################################################################
+2017-03-10 22:39:59.03130 HEL030 Current character set: utf8;
+2017-03-10 22:40:09 zoe.xeo joo336 ##############################################################################################################
+2017-03-10 22:40:09.26204 HEL030 Current character set: utf8;
+2017-03-10 22:40:09.27071 SELECT * FROM `st_stamm` WHERE `selbst` = '11';
+2017-03-10 22:40:09.27130 SELECT `ehe` FROM `st_ehen` WHERE `frau`=11 OR `mann`=11 ORDER BY `ehezeit`;
+2017-03-10 22:40:09.27538 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:40:09.28425 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:40:09.29573 SELECT * FROM `st_stamm` WHERE `selbst` = '11';
+2017-03-10 22:40:09.29983 SELECT * FROM `st_ehen` WHERE `ehe` = 987654;;
+2017-03-10 22:40:09.30546 SELECT e.ehe, e.mann AS gatte, e.mannname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.mann=11 AND e.mann=s.selbst UNION SELECT e.ehe, e.mann AS gatte, e.mannname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.frau=11 AND e.mann=s.selbst UNION SELECT e.ehe, e.frau AS gatte, e.frauname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.mann=11 AND e.frau=s.selbst UNION SELECT e.ehe, e.frau AS gatte, e.frauname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.frau=11 AND e.frau=s.selbst UNION SELECT     0, selbst AS gatte,       name AS ehename, geburtszeit,     NULL,   sterbezeit FROM        st_stamm   WHERE selbst=11 ORDER BY ehezeit DESC;
+2017-03-10 22:40:09.31551 SELECT month( max(anfang)) AS monat FROM st_tierkreis WHERE anfang <(SELECT geburtszeit FROM st_stamm WHERE selbst=11); ;
+2017-03-10 22:40:09.32752 SELECT created, name, con_position, address, suburb, postcode, telephone, email_to, mobile, webpage, checked_out_time, modified, publish_up, publish_down FROM st_contact_details INNER JOIN st_stamm2contact_details ON ( st_contact_details.id = st_stamm2contact_details.id) WHERE selbst = 11;;
+2017-03-10 22:40:09.32849 SELECT created, name, con_position, address, suburb, postcode, telephone, email_to, mobile, webpage, checked_out_time, modified, publish_up, publish_down FROM st_contact_details INNER JOIN st_stamm2contact_details ON ( st_contact_details.id = st_stamm2contact_details.id) WHERE selbst = 11;;
+2017-03-10 22:40:09.34386 SELECT * FROM `st_stamm` WHERE `selbst` = '26';
+2017-03-10 22:40:09.34449 SELECT `ehe` FROM `st_ehen` WHERE `frau`=11 OR `mann`=11 ORDER BY `ehezeit`;
+2017-03-10 22:40:09.35020 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:40:09.36049 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:40:09.37168 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:40:09.37224 SELECT `selbst` FROM `st_stamm` WHERE `mutter`=11 OR `vater`=11 ORDER BY `geburtszeit`;
+2017-03-10 22:40:09.38308 SELECT `geburtszeit` AS `erg` FROM st_stamm WHERE `selbst`='3999';
+2017-03-10 22:40:27 zoe.xeo joo336 ##############################################################################################################
+2017-03-10 22:40:27.50293 HEL030 Current character set: utf8;
+2017-03-10 22:40:27.51321 SELECT * FROM `st_stamm` WHERE `selbst` = '11';
+2017-03-10 22:40:27.51635 SELECT `selbst` FROM `st_stamm` WHERE `mutter`=11 OR `vater`=11 ORDER BY `geburtszeit`;
+2017-03-10 22:40:27.52132 SELECT `ehe` FROM `st_ehen` WHERE `frau`=11 OR `mann`=11 ORDER BY `ehezeit`;
+2017-03-10 22:40:27.52542 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:43:15 zoe.xeo joo336 ##############################################################################################################
+2017-03-10 22:43:15.54722 HEL030 Current character set: utf8;
+2017-03-10 22:43:15.55692 SELECT * FROM `st_stamm` WHERE `selbst` = '11';
+2017-03-10 22:43:15.55752 SELECT `ehe` FROM `st_ehen` WHERE `frau`=11 OR `mann`=11 ORDER BY `ehezeit`;
+2017-03-10 22:43:15.56143 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:43:15.57192 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:43:15.58088 SELECT * FROM `st_stamm` WHERE `selbst` = '11';
+2017-03-10 22:43:15.58400 SELECT * FROM `st_ehen` WHERE `ehe` = 987654;;
+2017-03-10 22:43:15.59014 SELECT e.ehe, e.mann AS gatte, e.mannname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.mann=11 AND e.mann=s.selbst UNION SELECT e.ehe, e.mann AS gatte, e.mannname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.frau=11 AND e.mann=s.selbst UNION SELECT e.ehe, e.frau AS gatte, e.frauname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.mann=11 AND e.frau=s.selbst UNION SELECT e.ehe, e.frau AS gatte, e.frauname AS ehename, e.ehezeit, e.endezeit, s.sterbezeit FROM st_ehen e, st_stamm s WHERE e.frau=11 AND e.frau=s.selbst UNION SELECT     0, selbst AS gatte,       name AS ehename, geburtszeit,     NULL,   sterbezeit FROM        st_stamm   WHERE selbst=11 ORDER BY ehezeit DESC;
+2017-03-10 22:43:15.60091 SELECT month( max(anfang)) AS monat FROM st_tierkreis WHERE anfang <(SELECT geburtszeit FROM st_stamm WHERE selbst=11); ;
+2017-03-10 22:43:15.61160 SELECT created, name, con_position, address, suburb, postcode, telephone, email_to, mobile, webpage, checked_out_time, modified, publish_up, publish_down FROM st_contact_details INNER JOIN st_stamm2contact_details ON ( st_contact_details.id = st_stamm2contact_details.id) WHERE selbst = 11;;
+2017-03-10 22:43:15.61261 SELECT created, name, con_position, address, suburb, postcode, telephone, email_to, mobile, webpage, checked_out_time, modified, publish_up, publish_down FROM st_contact_details INNER JOIN st_stamm2contact_details ON ( st_contact_details.id = st_stamm2contact_details.id) WHERE selbst = 11;;
+2017-03-10 22:43:15.62685 SELECT * FROM `st_stamm` WHERE `selbst` = '26';
+2017-03-10 22:43:15.62745 SELECT `ehe` FROM `st_ehen` WHERE `frau`=11 OR `mann`=11 ORDER BY `ehezeit`;
+2017-03-10 22:43:15.63123 SELECT * FROM `st_ehen` WHERE `ehe` = 53;;
+2017-03-10 22:43:15.63998 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:43:15.64857 SELECT * FROM `st_stamm` WHERE `selbst` = '1';
+2017-03-10 22:43:15.64919 SELECT `selbst` FROM `st_stamm` WHERE `mutter`=11 OR `vater`=11 ORDER BY `geburtszeit`;
+2017-03-10 22:43:15.65958 SELECT `geburtszeit` AS `erg` FROM st_stamm WHERE `selbst`='3999';

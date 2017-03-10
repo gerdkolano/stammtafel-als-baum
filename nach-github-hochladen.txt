@@ -1,3 +1,11 @@
+1) Bearbeiten, z.B
+   echo "# stammtafel-als-baum" >> README.md
+   vim nach-github-hochladen.txt
+2) Hochladen
+   git add .
+   git commit -m "README.md hochladen.txt"
+   git push origin master
+
 # bei https://github.com/gerdkolano ein Repository namens "stammtafel-als-baum" herstellen
 pushd /daten/srv/www/htdocs/stamm/mysqli/
 echo "# stammtafel-als-baum" >> README.md
@@ -8,10 +16,4 @@ git remote add origin https://github.com/gerdkolano/stammtafel-als-baum
 git push origin master
 git pull origin master # überflüssig ?
 git push origin master # überflüssig ?
-
-echo "# stammtafel-als-baum" >> README.md
-vim nach-github-hochladen.txt
-git add .
-git commit -m "README.md hochladen.txt"
-git push origin master
 
