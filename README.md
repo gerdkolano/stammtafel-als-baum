@@ -1,6 +1,6 @@
 # stammtafel-als-baum
 git add .
-git commit -m "README.md hochladen.txt"
+git commit -m ""
 git push origin master
 
 Browse nach zeige-mit-mysqli.php?1
